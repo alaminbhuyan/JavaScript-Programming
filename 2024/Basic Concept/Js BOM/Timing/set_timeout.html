@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut</title>
+</head>
+<body>
+    <div>
+        <h2>Timing Events</h2>
+
+        <h3>The window object allows execution of code at specified time intervals.</h3>
+
+        <h3>These time intervals are called timing events.</h3>
+
+        <h3>The two key methods to use with JavaScript are:</h3>
+
+        <h3>setTimeout(function, milliseconds)</h3>
+        <h3>Executes a function, after waiting a specified number of milliseconds.</h3>
+
+        <h3>setInterval(function, milliseconds)</h3>
+        <h3>Same as setTimeout(), but repeats the execution of the function continuously.</h3>
+        <h3>The setTimeout() and setInterval() are both methods of the HTML DOM Window object.</h3><hr>
+
+        <button onclick="setTimeout(myFunction, 2000)">click it</button><br><hr>
+        <p>The clearTimeout() method stops the execution of the function specified in setTimeout().</p>
+        <button onclick="myVar = setTimeout(myFunction2, 3000)">click it</button>
+        <button onclick="clearTimeout(myVar)">stop it</button>
+
+    </div>
+
+    <script>
+        function myFunction() {
+            alert("Hello, I am Alexa")
+        }
+
+        function myFunction2() {
+            alert("Hello, I am Jarvis")
+        }
+    </script>
+</body>
+</html>

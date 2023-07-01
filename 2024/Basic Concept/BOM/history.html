@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript window.history</title>
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+
+        function goForward() {
+            window.history.forward()
+        }
+    </script>
+</head>
+
+<body>
+    <!-- The window.history object can be written without the window prefix.
+
+To protect the privacy of the users, there are limitations to how JavaScript can access this object. -->
+    <input type="button" value="Back" onclick="goBack()">
+    <input type="button" value="goForward" onclick="goForward()">
+</body>
+
+</html>

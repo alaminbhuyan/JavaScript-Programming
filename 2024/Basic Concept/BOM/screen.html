@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript BOM</title>
+</head>
+
+<body>
+    <h2 id="demo"></h2>
+    <h2 id="demo2"></h2>
+    <h2 id="demo3"></h2>
+    <h2 id="demo4"></h2>
+    <h2 id="demo5"></h2>
+    <h2 id="demo6"></h2>
+
+    <script>
+        document.getElementById('demo').innerHTML = "The screen width is: " + screen.width
+        document.getElementById('demo2').innerHTML = "The screen Height is: " + screen.height
+        // The screen.availWidth property returns the width of the visitor's screen, in pixels, minus interface features like the Windows Taskbar.
+        document.getElementById('demo3').innerHTML = "The screen availWidth is: " + screen.availWidth
+        // The screen.availHeight property returns the height of the visitor's screen, in pixels, minus interface features like the Windows Taskbar.
+        document.getElementById('demo4').innerHTML = "The screen availHeight is: " + screen.availHeight
+        
+        // The screen.colorDepth property returns the number of bits used to display one color.
+        
+        // All modern computers use 24 bit or 32 bit hardware
+        // for color resolution:
+        
+        //     24 bits = 16, 777, 216 different "True Colors"
+        // 32 bits = 4, 294, 967, 296 different "Deep Colors"
+        document.getElementById('demo5').innerHTML = "The screen colorDepth is: " + screen.colorDepth + " bits"
+        // The screen.pixelDepth property returns the pixel depth of the screen.
+        document.getElementById('demo6').innerHTML = "The screen pixelDepth is: " + screen.pixelDepth + " bits"
+
+
+    </script>
+</body>
+
+</html>

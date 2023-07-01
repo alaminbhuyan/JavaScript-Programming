@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+</head>
+
+<body>
+    <h2>The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.</h2>
+
+    <ul>
+        <li>
+            <h3> window.location.href returns the href (URL) of the current page</h3>
+        </li>
+        <li>
+            <h3> window.location.hostname returns the domain name of the web host</h3>
+        </li>
+        <li>
+            <h3>window.location.pathname returns the path and filename of the current page</h3>
+        </li>
+        <li>
+            <h3>window.location.protocol returns the web protocol used (http: or https:)</h3>
+        </li>
+        <li>
+            <h3> window.location.assign() loads a new document</h3>
+        </li>
+
+    </ul>
+    <hr>
+
+    <h3 id="demo"></h3>
+    <h3 id="demo2"></h3>
+    <h3 id="demo3"></h3>
+    <h3 id="demo4"></h3>
+    <input type="button" value="Load new document" onclick="newDoc()" target="blank">
+    
+
+    <script>
+        document.getElementById("demo").innerHTML = "The full URL of this page is: " + window.location.href
+
+        document.getElementById("demo2").innerHTML = "The Host name of this page is: " + window.location.hostname
+
+        document.getElementById("demo3").innerHTML = "The Path name of this page is: " + window.location.pathname
+
+        document.getElementById("demo4").innerHTML = "The Protocol name of this page is: " + window.location.protocol
+
+        document.getElementById("demo4").innerHTML = "The Prot of this page is: " + window.location.port
+
+        function newDoc(){
+            window.location.assign("http://irisflowers.herokuapp.com/")
+        }
+
+
+    </script>
+</body>
+
+</html>

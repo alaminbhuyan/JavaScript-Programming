@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+
+    <div>
+        <form action="" name="myform1">
+            <label for="name">Name</label>
+            <input type="text" name="username" value="alamin" id="username_id"> <br><br>
+            <label for="password">password</label>
+            <input type="text"><br><br>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+    <script>
+        let myform = document.forms[0]
+        // let myform = document.forms['myform1']
+        console.log(myform);
+
+        let x = document.getElementById('username_id');
+        console.log(x);
+        console.log(x.name);
+        console.log(x.id);
+        console.log(x.type);
+        console.log(x.value);
+    </script>
+
+</body>
+
+</html>

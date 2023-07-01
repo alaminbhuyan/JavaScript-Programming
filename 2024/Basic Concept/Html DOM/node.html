@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Node</title>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">This is a paragraph</p>
+        <p id="p2">This is another paragraph</p>
+    </div>
+    <hr>
+    <div>
+        <p id="p3">First paragraph</p>
+        <p id="p4">Second paragraph</p>
+    </div>
+
+    <button onclick="myfunction()">Remove Element</button>
+    <hr>
+    <div id="div2">
+        <p id="p5">First paragraph</p>
+        <p id="p6">Second paragraph</p>
+    </div>
+    <button onclick="replaceElement()">Replace element</button>
+    <script>
+        // Creating New HTML Elements (Nodes)
+        var para = document.createElement("p")
+        var node = document.createTextNode("This is new Text")
+
+        para.appendChild(node)
+        document.getElementById("div1").appendChild(para)
+
+        // Creating new HTML Elements - insertBefore()
+        var para2 = document.createElement("h1")
+        var node2 = document.createTextNode("This is New Heading")
+
+        para2.appendChild(node2)
+
+        var element = document.getElementById("div1")
+        var child = document.getElementById("p1")
+        element.insertBefore(para2, child)
+
+        // Removing Existing HTML Elements
+        function myfunction() {
+            var element = document.getElementById("p4")
+            element.remove()
+        }
+        // Replacing HTML Elements 
+
+        function replaceElement(){
+            let element = document.getElementById("div2")
+            let oldNode = document.getElementById("p5")
+
+            let para3 = document.createElement("p")
+            let node3 = document.createTextNode("After Replacing: Hi, Alamin")
+
+            para3.appendChild(node3)
+
+            element.replaceChild(para3, oldNode)
+        }
+    </script>
+</body>
+
+</html>

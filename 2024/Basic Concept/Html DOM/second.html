@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html DOM</title>
+</head>
+
+<body>
+    <div id="main">
+        <p>DOM is very powerful component in html</p>
+        <p>In this tutorial I want learn how to use DOM</p>
+        <p>In next tutorial I will lean more about HTML DOM</p>
+    </div>
+    <h1 id="demo"></h1>
+    <h1 id="demo1"></h1>
+    <h1 id="demo2"></h1>
+    <hr>
+    <h3>******* Find the html element by the class name ********</h3>
+    <p class="intro">The DOM is very useful.</p>
+    <p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+    <h1 id="demo3"></h1>
+    <h1 id="demo4"></h1>
+    <hr>
+    <h3>**** Finding HTML Elements by HTML Object Collections ****</h3>
+    <h2>Finding HTML Elements Using document.forms</h2>
+
+    <form id="frm1" action="">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>Click "Try it" to display the value of each element in the form.</p>
+    <button onclick="myfunction()">Try it</button>
+    <h4 id="demo5"></h4>
+    
+    <script>
+        let x = document.getElementById("main");
+        // console.log(x)
+        let y = x.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML = y[0].innerHTML;
+        document.getElementById("demo1").innerHTML = y[1].innerHTML;
+        document.getElementById("demo2").innerHTML = y[2].innerHTML;
+        document.getElementById("demo2").style.color = "green";
+
+        // find the html element by the class name
+        let a = document.getElementsByClassName("intro");
+        document.getElementById("demo3").innerHTML = a[0].innerHTML;
+        document.getElementById("demo4").innerHTML = a[1].innerHTML;
+
+        // Finding HTML Elements by HTML Object Collections
+
+        function myfunction(){
+            let x = document.forms["frm1"];
+            let text = "";
+            let i;
+            for(i=0; i<x.length; i++){
+                text += x.elements[i].value + "<br>"
+            }
+            document.getElementById("demo5").innerHTML = text
+        }
+    </script>
+</body>
+
+</html>

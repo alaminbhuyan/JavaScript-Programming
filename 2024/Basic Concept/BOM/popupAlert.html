@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-Up-Alert</title>
+</head>
+
+<body>
+    <h1>avaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.</h1>
+    <h2>Alert Box:</h2>
+    <p>
+        An alert box is often used if you want to make sure information comes through to the user.
+
+        When an alert box pops up, the user will have to click "OK" to proceed.</p>
+    <h2>JavaScript Alert</h2>
+    <button onclick="alert('I am pop up alert')">try it</button>
+    <hr>
+    <h2>Confirm Box:</h2>
+    <p> A confirm box is often used if you want the user to verify or accept something.
+
+        When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed.
+
+        If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.
+    </p>
+
+    <button onclick="myfun()">try it</button>
+    <p id="p1"></p>
+    <hr>
+    <h2>Prompt box:</h2>
+    <p>
+        A prompt box is often used if you want the user to input a value before entering a page.
+
+        When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an
+        input value.
+
+        If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
+    </p>
+    <p id="p2"></p>
+    <button onclick="myfun2()">try it</button>
+
+    <script>
+        function myfun() {
+            var txt
+            if (confirm("Press a button")) {
+                txt = "You Pressed OK"
+            } else {
+                txt = "You Pressed Cancel"
+            }
+            document.getElementById("p1").innerHTML = txt
+        }
+
+        // window.prompt("sometext","defaultText");
+        
+        function myfun2() {
+            var txt;
+            var person = prompt("Please enter your name:", "Harry Potter");
+            if (person == null || person == "") {
+                txt = "User cancelled the prompt.";
+            } else {
+                txt = "Hello " + person + "! How are you today?";
+            }
+            document.getElementById("p2").innerHTML = txt;
+        }
+    </script>
+
+</body>
+
+</html>

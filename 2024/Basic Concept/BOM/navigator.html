@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator</title>
+</head>
+
+<body>
+    <!-- The window.navigator object contains information about the visitor's browser. -->
+    <h2>The Navigator Object</h2>
+
+    <p>The cookieEnabled property returns true if cookies are enabled:</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <h3>Strange enough, "Netscape" is the application name for both IE11, Chrome, Firefox, and Safari.</h3>
+    <p id="demo3"></p>
+    <h3>"Mozilla" is the application code name for both Chrome, Firefox, IE, Safari, and Opera.</h3>
+    <p id="demo4"></p>
+    <h3>Do not rely on this. Most browsers returns "Gecko" as product name !!</h3>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+
+    <script>
+        // The window.navigator object contains information about the visitor's browser
+        document.getElementById("demo").innerHTML = "navigator.cookieEnabled is: "+ navigator.cookieEnabled
+
+        // The appName property returns the application name of the browser:
+        document.getElementById("demo2").innerHTML = "navigator.appName is: " + navigator.appName
+        // The appCodeName property returns the application code name of the browser:
+        document.getElementById("demo3").innerHTML = "navigator.appCodeName is: " + navigator.appCodeName
+        // The product property returns the product name of the browser engine:
+        document.getElementById("demo4").innerHTML = "navigator.product is: " + navigator.product
+        // The appVersion property returns version information about the browser:
+        document.getElementById("demo5").innerHTML = "navigator.appVersion is: " + navigator.appVersion
+        // The userAgent property returns the user-agent header sent by the browser to the server:
+        document.getElementById("demo6").innerHTML = "navigator.appVersion is: " + navigator.userAgent
+        // he platform property returns the browser platform (operating system):
+        document.getElementById("demo7").innerHTML = "navigator.platform is: " + navigator.platform
+        // The onLine property returns true if the browser is online:
+        document.getElementById("demo8").innerHTML = "navigator.onLine is: " + navigator.onLine
+        // The language property returns the browser's language:
+        document.getElementById("demo9").innerHTML = "navigator.language is: " + navigator.language
+        // The javaEnabled() method returns true if Java is enabled:
+        document.getElementById("demo10").innerHTML = "navigator.javaEnabled is: " + navigator.javaEnabled()
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third Way to light ON OFF</title>
+</head>
+<body>
+    <button id="btn1">Trun on the light</button>
+
+    <img src="pic_bulboff.gif" alt="lightoff" id="myimg" style="width: 100px;">
+    
+    <button id="btn2">Trun off the light</button>
+
+    <script>
+        document.getElementById("btn1").addEventListener('click', lightOn)
+        document.getElementById("btn2").addEventListener('click', lightOff)
+
+        // This is the functions
+        function lightOn(){
+            document.getElementById('myimg').src = 'pic_bulbon.gif'
+        }
+        function lightOff(){
+            document.getElementById('myimg').src = 'pic_bulboff.gif'
+        }
+    </script>
+</body>
+</html>

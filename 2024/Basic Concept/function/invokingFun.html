@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+
+    <div>
+        <h3 id='demo'></h3>
+
+        <h2>JavaScript Closures</h2>
+
+        <p>Counting with a local variable.</p>
+
+        <button type="button" onclick="myFunction()">Count!</button>
+
+        <p id="demo2">0</p>
+    </div>
+
+    <script>
+        (function () {
+            document.getElementById('demo').innerHTML = "Hello this is invoking function"
+        })();
+
+        const add = (function () {
+            let counter = 0;
+            return function () {
+                counter += 1;
+                return counter;
+            }
+        })();
+
+        function myFunction() {
+            document.getElementById('demo2').innerHTML = add();
+        }
+    </script>
+
+</body>
+
+</html>

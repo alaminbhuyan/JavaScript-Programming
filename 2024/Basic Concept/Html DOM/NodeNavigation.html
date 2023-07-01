@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Navigation</title>
+</head>
+<body>
+    <h1 id="demo">This first Heading</h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <h2 id="demo2">This is Second Heading</h2>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+
+    <script>
+        var x = document.getElementById('demo').innerHTML // this is one way to access value
+
+        var y = document.getElementById('demo').firstChild.nodeValue // this is second way
+        document.getElementById("p1").innerHTML = y
+
+        var z = document.getElementById('demo').childNodes[0].nodeValue // this is third way
+        document.getElementById("p2").innerHTML = z
+        document.getElementById("p2").style.color = "red"
+
+        var a = document.getElementById("demo2").childNodes[0].nodeValue
+        document.getElementById("p3").innerHTML = a
+
+        document.getElementById("p4").innerHTML = document.getElementById("demo").nodeName
+        document.getElementById("p5").innerHTML = document.getElementById("demo2").nodeType
+
+        
+    </script>
+</body>
+</html>

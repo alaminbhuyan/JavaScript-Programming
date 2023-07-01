@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+    <h1 id="id1">My Heading 1</h1>
+
+    <button type="button" onclick="document.getElementById('id1').style.color = 'red'">Click Me!</button>
+    <hr>
+
+    <p id="p1">Hi, this is alamin bhuyan. Your new instructor</p>
+    <input type="button" value="Hide text" onclick="document.getElementById('p1').style.visibility = 'hidden' ">
+    <input type="button" value="Show text" onclick="document.getElementById('p1').style.visibility= 'visible' ">
+
+    <hr>
+
+    <h1 onclick="this.innerHTML='Opps' ">Click on this text</h1>
+
+    <hr>
+
+    <h1 onclick="changeText(this)">Click on this text</h1>
+
+    <hr>
+
+    <p>Click the button to display the date.</p>
+
+    <button onclick="displayDate(this)">The time is?</button>
+    <hr>
+    <h3>Click the button to display the date.</h3>
+    <button onclick="displayDate2()">The time is?</button>
+    <p id="demo"></p>
+
+    <hr>
+
+    <p>Click "Try it" to execute the displayDate() function.</p>
+
+    <button id="myBtn">Try it</button>
+
+    <p id="demo2"></p>
+
+
+    <script>
+        function changeText(id) {
+            id.innerHTML = "What the fuck !!!!!!"
+        }
+
+        function displayDate(id) {
+            id.innerHTML = Date();
+        }
+
+        function displayDate2() {
+            document.getElementById('demo').innerHTML = Date();
+        }
+
+        document.getElementById("myBtn").onclick = myfun;
+
+        function myfun(){
+            document.getElementById('demo2').innerHTML = Date();
+        }
+    </script>
+
+</html>

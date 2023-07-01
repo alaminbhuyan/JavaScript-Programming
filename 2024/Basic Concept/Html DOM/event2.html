@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body onload="myMessage()">
+    <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+    Enter your name: <input type="text" name="name" id="fname" onchange="myfunction()"><br><br>
+    Enter your name: <input type="text" name="name" id="fname2" onfocus="myfunction2(this)">
+
+    <hr>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse over me</div>
+    <hr>
+    <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">
+        Mouse over this text</h1>
+
+    <script>
+        function myfunction() {
+            let x = document.getElementById('fname');
+            x.value = x.value.toUpperCase();
+        }
+
+        function myfunction2(obj) {
+            obj.style.background = "yellow"
+        }
+
+        function mOver(obj) {
+            obj.innerHTML = "Thank you"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "Mouse over me"
+        }
+
+        function myMessage() {
+            alert("The page is loaded completely")
+        }
+    </script>
+</body>
+
+</html>

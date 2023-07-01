@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing</title>
+</head>
+
+<body>
+    <h1>Timing Events</h1>
+    The window object allows execution of code at specified time intervals.
+
+    These time intervals are called timing events.
+
+    The two key methods to use with JavaScript are:
+
+    <li>
+        <h3>setTimeout(function, milliseconds)</h3>
+    </li>
+    Executes a function, after waiting a specified number of milliseconds.
+
+    <li>
+        <h3>setInterval(function, milliseconds)</h3>
+    </li>
+    Same as setTimeout(), but repeats the execution of the function continuously.
+    <h1>The setTimeout() and setInterval() are both methods of the HTML DOM Window object.</h1>
+    <hr>
+    <p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>
+    <p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+    <p>Click "Stop" to prevent the first function to execute.</p>
+    <p>(You must click "Stop" before the 3 seconds are up.)</p>
+
+    <button onclick="myVar = setTimeout(myfun, 2000)">Try it</button>
+
+    <button onclick="clearTimeout(myVar)">stop it</button>
+
+    <hr>
+    <p>A script on this page starts this clock</p>
+    <p id="demo"></p>
+
+    <button onclick="clearInterval(myVar2)">Stop time</button>
+    
+    <script>
+        function myfun() {
+            alert("hello")
+        }
+
+        var myVar2 = setInterval(myTimer, 1000);
+
+        function myTimer() {
+            var d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+    </script>
+</body>
+
+</html>

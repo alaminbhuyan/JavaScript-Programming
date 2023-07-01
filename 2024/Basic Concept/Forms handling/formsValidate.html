@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+
+    <div>
+        <form action="" name="myform">
+            <label for="name">Name</label>
+            <input type="text" name="username" value="Alamin" id="username_id"><small id="message"></small> <br><br>
+            <label for="password">password</label>
+            <input type="text"><br><br>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+    <script>
+        function validate_data() {
+            let pattern = /^([^0-9\W]*)$/;
+            if (pattern.test(document.myform.username.value)) {
+                document.myform.username.style.backgroundColor = 'pink';
+                document.getElementById('message').textContent = "User is valid";
+            } else {
+                document.myform.username.style.backgroundColor = 'red';
+                document.getElementById('message').textContent = "User is Invalid";
+            }
+        }
+        document.myform.username.addEventListener('keyup', validate_data);
+    </script>
+
+</body>
+
+</html>

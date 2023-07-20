@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification</title>
+    <!-- For font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Style sheet link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="btn">
+        <button onclick="showToast(successMsg)">Success</button>
+        <button onclick="showToast(errorMsg)">Error</button>
+        <button onclick="showToast(invalidMsg)">Invalid</button>
+    </div>
+
+    <div id="toastBox">
+
+    </div>
+
+<script>
+    // catch the div to insert a new div element inside it
+    let toastBox = document.getElementById("toastBox");
+    // All the messages
+    let successMsg = '<i class="fa-solid fa-circle-check"></i> Successfully Submitted';
+    let errorMsg = '<i class="fa-solid fa-circle-xmark"></i> Please fix the error!';
+    
+    let invalidMsg = '<i class="fa-solid fa-circle-exclamation"></i> Invalid input, check again';
+
+    // create the onClick function
+    function showToast(message){
+        // created a div element
+        let toast = document.createElement('div');
+        // add a class to the div element
+        toast.classList.add('toast');
+        // some text inside the div
+        toast.innerHTML = message;
+        // Now append the element
+        toastBox.appendChild(toast);
+
+        // add class in the div that we created by js based on condition
+        // in the message should contain error string
+        if (message.includes("error")) {
+            toast.classList.add('error');
+        }
+        
+        if (message.includes("Invalid")) {
+            toast.classList.add('invalid');
+        }
+
+        // The notification toast will be remove after 5 second
+        setTimeout(() => {
+            toast.remove()
+        }, 5000)
+    }
+</script>
+
+</body>
+</html>

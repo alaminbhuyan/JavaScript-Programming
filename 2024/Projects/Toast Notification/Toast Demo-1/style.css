@@ -68,7 +68,7 @@ body {
     color: rgb(173, 26, 26);
 }
 
-.toast.invalid i{
+.toast.invalid i {
     color: orange;
 }
 
